@@ -1,7 +1,7 @@
 const detailContainer = document.querySelector('.detail-container');
 const btnAddCart = document.getElementById('addCart');
 const cartIcon = document.querySelector('.cart');
-
+const header__account = document.querySelector('.header__account');
 window.addEventListener('DOMContentLoaded', () => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
@@ -10,8 +10,14 @@ window.addEventListener('DOMContentLoaded', () => {
             loggedInUser.username;
         document.querySelector('.header__account i').className =
             'fa fa-sign-in-alt';
+    } else {
+        document.querySelector('.header__account').innerHTML = `
+        <i class="fa fa-user-alt"></i>
+       <p id="accountname">Login</p>
+`;
     }
 });
+
 const getDetaiProduct = async () => {
     const path = new URLSearchParams(window.location.search);
     const productId = path.get('id');
@@ -84,6 +90,17 @@ const setCartItem = () => {
         cartIcon.innerHTML = '';
     }
 };
+function logout() {
+    localStorage.removeItem('loggedInUser');
 
+    document.querySelector('.header__account').innerHTML = `
+                     <i class="fa fa-user-alt"></i>
+                    <p id="accountname">Login</p>
+    `;
+
+    window.location.href('login_signup.html');
+}
+
+header__account.addEventListener('click', logout);
 setCartItem();
 getDetaiProduct();

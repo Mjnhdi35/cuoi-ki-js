@@ -3,6 +3,22 @@ let cartContainer = document.querySelector('.cart-container');
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartSummary = document.querySelector('.cart-summary');
+const header__account = document.querySelector('.header__account');
+window.addEventListener('DOMContentLoaded', () => {
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (loggedInUser) {
+        document.getElementById('accountname').innerHTML =
+            loggedInUser.username;
+        document.querySelector('.header__account i').className =
+            'fa fa-sign-in-alt';
+    } else {
+        document.querySelector('.header__account').innerHTML = `
+        <i class="fa fa-user-alt"></i>
+       <p id="accountname">Login</p>
+`;
+    }
+});
 
 const renderCartItem = async () => {
     const response = await fetch('https://dummyjson.com/products');
@@ -123,5 +139,17 @@ let clearCart = () => {
     localStorage.setItem('cart', JSON.stringify(cart));
 };
 
+function logout() {
+    localStorage.removeItem('loggedInUser');
+
+    document.querySelector('.header__account').innerHTML = `
+                     <i class="fa fa-user-alt"></i>
+                    <p id="accountname">Login</p>
+    `;
+
+    window.location.href('login_signup.html');
+}
+
+header__account.addEventListener('click', logout);
 renderCartItem();
 totalProduct();

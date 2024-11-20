@@ -7,6 +7,11 @@ window.addEventListener('DOMContentLoaded', () => {
             loggedInUser.username;
         document.querySelector('.header__account i').className =
             'fa fa-sign-in-alt';
+    } else {
+        document.querySelector('.header__account').innerHTML = `
+        <i class="fa fa-user-alt"></i>
+       <p id="accountname">Login</p>
+`;
     }
 });
 
@@ -34,5 +39,15 @@ const getData = async () => {
             .join(' ');
     }
 };
+function logout() {
+    localStorage.removeItem('loggedInUser');
+
+    document.querySelector('.header__account').innerHTML = `
+                     <i class="fa fa-user-alt"></i>
+                    <p id="accountname">Login</p>
+    `;
+
+    window.location.href('login_signup.html');
+}
 
 getData();
