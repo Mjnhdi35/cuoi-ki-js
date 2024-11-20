@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- google font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="loginstyle.css" />
+
+        <title>Login / SignIn</title>
+    </head>
+    <body>
+        <div class="backtohome">
+            <a href="../../main.html">Back to home</a>
+        </div>
+
+        <div class="container">
+            <div class="container-forms">
+                <div class="container-info">
+                    <div class="info-item">
+                        <p>Have an account ?</p>
+                        <button class="btn">Log In</button>
+                    </div>
+                    <div class="info-item">
+                        <p>Do not have an accout</p>
+                        <button class="btn">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="container-form">
+                    <form class="form-item log-in" action="">
+                        <h1>Log In</h1>
+                        <input
+                            id="loginUsername"
+                            name="Username"
+                            type="text"
+                            placeholder="Username"
+                        />
+                        <input
+                            type="password"
+                            name="Password"
+                            id="loginPassword"
+                            placeholder="Password"
+                        />
+                        <div id="loginMessage"></div>
+                        <button type="submit" class="btn">Log In</button>
+                    </form>
+
+                    <form class="form-item sign-up" action="">
+                        <h1>Sign Up</h1>
+
+                        <input
+                            type="email"
+                            id="regEmail"
+                            name="email"
+                            placeholder="email"
+                        />
+                        <input
+                            type="text"
+                            id="regFullName"
+                            name="Fullname"
+                            placeholder="Full Name"
+                        />
+                        <input
+                            type="text"
+                            name="Username"
+                            id="regUsername"
+                            placeholder="Username"
+                        />
+                        <input
+                            type="password"
+                            name="Password"
+                            id="regPassword"
+                            placeholder="Password"
+                        />
+                        <div id="regMessage"></div>
+                        <button
+                            class="btn"
+                            type="submit"
+                            onclick="register(event)"
+                        >
+                            Sign Up
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="loginmain.js"></script>
+    </body>
+</html>

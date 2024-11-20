@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    background-color: #dabdac;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+header .logo {
+    width: 150px;
+}
+.logo img {
+    width: 100%;
+}
+.header__navbar ul {
+    list-style: none;
+    display: flex;
+}
+.header__navbar ul li a {
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.header__navbar ul li a:hover {
+    color: #ef5a6f;
+    text-decoration: underline;
+}
+.header__info {
+    display: flex;
+}
+.header__info > a {
+    color: #000;
+}
+.header__info > a:hover {
+    color: #ef5a6f;
+}
+.header__info i {
+    font-size: 23px;
+    margin: 15px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.header__info i:hover {
+    color: #ef5a6f;
+}
+.cart > p {
+    position: absolute;
+    right: 99px;
+    top: 48px;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 10px;
+}
+.header__account {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.header__account:hover {
+    color: #ef5a6f;
+}
+.header__account i {
+    margin: 0;
+}
+.products {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.product-item {
+    width: 350px;
+    height: 700px;
+    padding: 15px;
+    box-shadow: 7px 4px 15px 2px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.product-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-info h3 {
+    font-size: 23px;
+}
+.product-info a {
+    text-decoration: none;
+    width: 90%;
+    text-align: center;
+    background-color: #134b70;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    margin: 15px auto;
+    font-weight: 500;
+}
+.product-info a:hover {
+    background-color: #536493;
+}
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}

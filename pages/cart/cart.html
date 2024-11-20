@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="../../css/shoppingindexstyles.css" />
+        <link rel="stylesheet" href="cart.css" />
+        <title>Cart</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../../main.html">
+                    <img src="../../assets/logogo.jpg" alt="logo" />
+                </a>
+            </div>
+
+            <nav class="header__navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__info">
+                <i class="fa fa-search"></i>
+                <a href="#" class="cart">
+                    <!-- <p class="cart-item">0</p> -->
+                    <i class="fa fa-shopping-bag"> </i>
+                </a>
+
+                <a
+                    href="../authenticate/login_signup.html"
+                    class="header__account"
+                >
+                    <i class="fa fa-user-alt"></i>
+                    <p class="accountname">Login</p>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-part">
+                    <div class="cart-img">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="cart-desc">
+                        <h3>Ai phon</h3>
+                    </div>
+                    <div class="cart-quantity">
+                        <input type="number" id="quantity" min="0" />
+                    </div>
+                    <div class="cart-price">
+                        <h4>$ 2000</h4>
+                    </div>
+                    <div class="cart-total">
+                        <h4>$ 2000</h4>
+                    </div>
+                    <div class="cart-remove">
+                        <button>Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <div class="product-total">
+                    <h2>Total Product</h2>
+                    <span id="total">$100000</span>
+                </div>
+
+                <div class="product-checkout">
+                    <a href="../checkout/checkout.html" class="checkout"
+                        >Check out</a
+                    >
+                </div>
+                <button class="removeAll">Clear cart</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                <p>Copyright &copy; Mdj</p>
+                <a href="#">Mdj</a>
+            </div>
+        </footer>
+        <script src="cart.js"></script>
+        <script src="../detail/detail.js"></script>
+    </body>
+</html>
